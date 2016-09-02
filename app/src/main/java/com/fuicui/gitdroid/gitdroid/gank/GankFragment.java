@@ -2,7 +2,6 @@ package com.fuicui.gitdroid.gitdroid.gank;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -82,6 +81,7 @@ public class GankFragment extends Fragment implements GankPresenter.GankView{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String url = adapter.getItem(position).getUrl();
+                //调用方法，传入url，在浏览器显示干活具体内容
                 activityUtils.startBrowser(url);
             }
         });
